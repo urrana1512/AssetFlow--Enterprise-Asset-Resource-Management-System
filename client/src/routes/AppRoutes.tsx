@@ -69,8 +69,7 @@ const PrivateRoute: React.FC<{ children?: React.ReactNode }> = () => {
       <aside className={`hidden md:flex flex-col w-64 bg-surface border-r border-border transition-all duration-300 z-30`}>
         <div className="h-16 flex items-center px-6 border-b border-border">
           {/* Custom App Logo */}
-          <img src="/logo.png" className="w-8 h-8 mr-3 object-contain" alt="AssetFlow Logo" />
-          <span className="font-heading font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AssetFlow</span>
+          <img src="/logo.png" className="h-10 w-auto max-w-[180px] object-contain" alt="AssetFlow Logo" />
         </div>
 
         <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
@@ -120,7 +119,7 @@ const PrivateRoute: React.FC<{ children?: React.ReactNode }> = () => {
           <div className="fixed inset-0 bg-black/50" onClick={() => setSidebarOpen(false)} />
           <aside className="relative flex flex-col w-64 bg-surface h-full z-10 border-r border-border animate-slide-in">
             <div className="h-16 flex items-center justify-between px-6 border-b border-border">
-              <span className="font-heading font-bold text-lg text-primary">AssetFlow</span>
+              <img src="/logo.png" className="h-10 w-auto max-w-[150px] object-contain" alt="AssetFlow Logo" />
               <button onClick={() => setSidebarOpen(false)} className="text-muted-foreground">
                 <X className="w-6 h-6" />
               </button>
