@@ -57,16 +57,6 @@ const Login: React.FC = () => {
     }
   };
 
-  // Logo draw animation config
-  const logoPathVariants = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: {
-      pathLength: 1,
-      opacity: 1,
-      transition: { duration: 1.2, ease: 'easeInOut' },
-    },
-  };
-
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <motion.div
@@ -76,26 +66,8 @@ const Login: React.FC = () => {
         className="w-full max-w-md space-y-8 glass p-8 rounded-2xl shadow-xl shadow-primary/5"
       >
         <div className="flex flex-col items-center">
-          {/* Animated SVG logo */}
-          <svg className="w-20 h-20 mb-4" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="logo-grad-auth" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#192A56" />
-                <stop offset="100%" stopColor="#EDA6A3" />
-              </linearGradient>
-            </defs>
-            <rect width="100" height="100" rx="20" fill="url(#logo-grad-auth)" />
-            <motion.path
-              d="M30 70 V40 H50 M30 50 H45 C50 50 60 55 60 65 V70 M50 30 H70 M50 30 V55"
-              stroke="white"
-              strokeWidth="8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              variants={logoPathVariants as any}
-              initial="hidden"
-              animate="visible"
-            />
-          </svg>
+          {/* Custom App Logo */}
+          <img src="/logo.png" className="w-20 h-20 mb-4 object-contain" alt="AssetFlow Logo" />
 
           <h2 className="text-center text-3xl font-bold font-heading bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             AssetFlow

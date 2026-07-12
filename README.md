@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.svg" width="120" alt="AssetFlow Logo" />
+  <img src="./logo.png" width="120" alt="AssetFlow Logo" />
 </p>
 
 <h1 align="center">AssetFlow</h1>

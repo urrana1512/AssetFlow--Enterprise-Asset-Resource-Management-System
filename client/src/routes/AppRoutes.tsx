@@ -68,17 +68,8 @@ const PrivateRoute: React.FC<{ children?: React.ReactNode }> = () => {
       {/* Sidebar for Desktop */}
       <aside className={`hidden md:flex flex-col w-64 bg-surface border-r border-border transition-all duration-300 z-30`}>
         <div className="h-16 flex items-center px-6 border-b border-border">
-          {/* SVG Monogram Logo (A + F curved flow ribbon) */}
-          <svg className="w-8 h-8 mr-3" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#192A56" />
-                <stop offset="100%" stopColor="#EDA6A3" />
-              </linearGradient>
-            </defs>
-            <rect width="100" height="100" rx="20" fill="url(#logo-grad)" />
-            <path d="M30 70 V40 H50 M30 50 H45 C50 50 60 55 60 65 V70 M50 30 H70 M50 30 V55" stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+          {/* Custom App Logo */}
+          <img src="/logo.png" className="w-8 h-8 mr-3 object-contain" alt="AssetFlow Logo" />
           <span className="font-heading font-bold text-lg bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AssetFlow</span>
         </div>
 
