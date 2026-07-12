@@ -67,7 +67,7 @@ const Login: React.FC = () => {
       >
         <div className="flex flex-col items-center">
           {/* Custom App Logo */}
-          <img src="/logo.png" className="h-14 w-auto max-w-[280px] object-contain mb-4" alt="AssetFlow Logo" />
+          <img src="/logo.png" className="w-24 h-24 object-contain" alt="AssetFlow Logo" />
 
           <p className="text-center text-sm text-muted-foreground">
             Enterprise Asset & Resource Management
