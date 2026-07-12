@@ -62,7 +62,7 @@ const Signup: React.FC = () => {
       >
         <div className="flex flex-col items-center">
           {/* Custom App Logo */}
-          <img src="/logo.png" className="h-14 w-auto max-w-[280px] object-contain mb-4" alt="AssetFlow Logo" />
+          <img src="/logo.png" className="h-20 w-auto max-w-full object-contain mb-4" alt="AssetFlow Logo" />
 
           <h2 className="text-center text-3xl font-bold font-heading bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Create Account
