@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #192A56;
+    --color-primary-foreground: #FCFBFB;
+    --color-accent: #EDA6A3;
+    --color-background: #FCFBFB;
+    --color-foreground: #192A56;
+    --color-surface: #ffffff;
+    --color-surface-hover: rgba(247, 215, 148, 0.15);
+    --color-border: #EBE9E9;
+    --color-muted-foreground: #7F8C8D;
+
+    /* Semantic badges */
+    --color-status-available: #10B981;
+    --color-status-allocated: #192A56;
+    --color-status-reserved: #F7D794;
+    --color-status-maintenance: #EDA6A3;
+    --color-status-lost: #F43F5E;
+    --color-status-retired: #7F8C8D;
+    --color-status-disposed: #3F3F46;
+    --color-status-overdue: #EF4444;
+    --color-status-pending: #F7D794;
+    --color-status-approved: #10B981;
+    --color-status-rejected: #F43F5E;
+  }
+
+  .dark {
+    --color-primary: #192A56;
+    --color-primary-foreground: #FCFBFB;
+    --color-accent: #EDA6A3;
+    --color-background: #FCFBFB;
+    --color-foreground: #192A56;
+    --color-surface: #ffffff;
+    --color-surface-hover: rgba(247, 215, 148, 0.15);
+    --color-border: #EBE9E9;
+    --color-muted-foreground: #7F8C8D;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased transition-colors duration-200;
+  }
+
+  ::selection {
+    background-color: rgba(79, 70, 229, 0.2);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full transition-colors;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(100, 116, 139, 0.3);
+}
+
+/* Shimmer keyframes for Skeleton */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.animate-shimmer::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.08) 20%,
+    rgba(255, 255, 255, 0.15) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 1.5s infinite;
+  content: '';
+}
+.dark .animate-shimmer::after {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.03) 20%,
+    rgba(255, 255, 255, 0.06) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Glassmorphism utility */
+.glass {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+.dark .glass {
+  background-color: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(31, 41, 55, 0.5);
+}

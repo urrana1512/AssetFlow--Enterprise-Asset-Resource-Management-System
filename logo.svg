@@ -1,0 +1,49 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Shifting Gradient Animation -->
+    <linearGradient id="flow-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#192A56">
+        <animate attributeName="stop-color" values="#192A56; #EDA6A3; #F7D794; #192A56" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#EDA6A3">
+        <animate attributeName="stop-color" values="#EDA6A3; #F7D794; #192A56; #EDA6A3" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#F7D794">
+        <animate attributeName="stop-color" values="#F7D794; #192A56; #EDA6A3; #F7D794" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <style>
+      .draw-path {
+        stroke-dasharray: 200;
+        stroke-dashoffset: 200;
+        animation: draw 2s ease-in-out forwards;
+      }
+      
+      .pulse-bg {
+        animation: pulse 3s ease-in-out infinite;
+      }
+
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 0.9;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Hexagon Asset Tag Base -->
+  <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" fill="url(#flow-grad)" class="pulse-bg" />
+
+  <!-- Monogram A + F flowing lines -->
+  <path class="draw-path" d="M35 70 V40 H50 M35 50 H45 C50 50 60 54 60 62 V70 M50 30 H65 M50 30 V50" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
